@@ -1,0 +1,18 @@
+name "ffmpeg4d"
+description "D bindings to FFmpeg"
+authors "Les De Ridder" "FFmpeg authors"
+copyright "Copyright © 2019, FFmpeg authors"
+license "LGPL-2.1"
+targetPath "out"
+
+libs "avcodec" "avformat" "avutil" "avfilter" "avdevice" "postproc" "swscale" "swresample"
+
+mainSourceFile "test/test.d"
+
+configuration "source-library" {
+    targetType "sourceLibrary"
+}
+
+configuration "static-library" {
+    targetType "staticLibrary"
+}
